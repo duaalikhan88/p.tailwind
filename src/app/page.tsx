@@ -1,101 +1,188 @@
-import Image from "next/image";
+import React from 'react';
 
-export default function Home() {
+const Portfolio = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-black text-white">
+    
+      <nav className="py-4 px-6 fixed w-full top-0 left-0 bg-black z-50 shadow-lg">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <a href="#home" className="text-2xl font-bold text-white">Dua Ali Khan</a>
+          <ul className="flex space-x-6">
+            <li><a href="#about" className="hover:text-blue-500">About</a></li>
+            <li><a href="#projects" className="hover:text-blue-500">Projects</a></li>
+            <li><a href="#skills" className="hover:text-blue-500">Skills</a></li>
+            <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
+          </ul>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </nav>
+
+   
+      <section id="home" className="h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/images/BG.jpg')" }}>
+  <div className="text-center"></div>
+        <div className="text-center">
+          <h1 className="text-5xl font-extrabold mb-4">Hello, I'm Dua Ali Khan</h1>
+          <p className="text-xl mb-6">A passionate Web Developer and Software Quality Assurance Engineer</p>
+         
+        </div>
+      </section>
+
+    
+      <section id="about" className="py-20 bg-gray-800">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
+          <p className="text-lg text-gray-400">
+            Hi, I'm Dua Ali Khan, a web developer who specializes in creating dynamic and responsive websites. 
+            I'm passionate about utilizing modern web technologies like Next.js, TypeScript, and Tailwind CSS to create engaging user experiences.
+          </p>
+        </div>
+      </section>
+
+    
+      <section id="projects" className="py-20 bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Project 1 */}
+            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/comforty.png" alt="Comforty Project" className="w-full h-40 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Comforty</h3>
+                <p className="text-gray-400 mb-4">
+                  An e-commerce website for furniture sales built with Next.js, TypeScript, and Tailwind CSS.
+                </p>
+                <a href="#" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                  View Project
+                </a>
+              </div>
+            </div>
+
+           
+            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/calculator.png" alt="Media Mart Project" className="w-full h-40 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Media Mart</h3>
+                <p className="text-gray-400 mb-4">
+                  A platform for beauty products and home accessories built using modern tools.
+                </p>
+                <a href="#" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                  View Project
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/editable resume.jpeg" alt="Project 3" className="w-full h-40 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Project 3</h3>
+                <p className="text-gray-400 mb-4">
+                  A custom application showcasing creativity and skills.
+                </p>
+                <a href="#" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                  View Project
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/flower.png" alt="Project 4" className="w-full h-40 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Project 4</h3>
+                <p className="text-gray-400 mb-4">
+                  A responsive design project with a focus on UX/UI best practices.
+                </p>
+                <a href="#" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                  View Project
+                </a>
+              </div>
+            </div>
+
+           
+            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/jewelry.png" alt="Project 5" className="w-full h-40 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Project 5</h3>
+                <p className="text-gray-400 mb-4">
+                  A collaborative project showcasing teamwork and technical expertise.
+                </p>
+                <a href="#" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                  View Project
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+              <img src="/images/static resume.jpeg" alt="Project 6" className="w-full h-40 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Project 6</h3>
+                <p className="text-gray-400 mb-4">
+                  A project focused on integrating APIs and third-party services.
+                </p>
+                <a href="#" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                  View Project
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="skills" className="py-20 bg-gray-800">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Skills</h2>
+          <ul className="list-disc pl-6 text-gray-400 space-y-2">
+            <li>Next.js</li>
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>Tailwind CSS</li>
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact" className="py-20 bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Contact</h2>
+          <form>
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-lg">Name</label>
+              <input
+                type="text"
+                id="name"
+                className="w-full p-2 border border-gray-700 rounded bg-gray-800 text-white"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-lg">Email</label>
+              <input
+                type="email"
+                id="email"
+                className="w-full p-2 border border-gray-700 rounded bg-gray-800 text-white"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="message" className="block text-lg">Message</label>
+              <textarea
+                id="message"
+                className="w-full p-2 border border-gray-700 rounded bg-gray-800 text-white"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <footer className="py-4 bg-gray-800 text-center text-gray-400">
+        <p>&copy; 2025 Dua Ali Khan. All Rights Reserved.</p>
       </footer>
     </div>
   );
-}
+};
+
+export default Portfolio;     
