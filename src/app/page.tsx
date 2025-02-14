@@ -167,7 +167,7 @@ const Portfolio = () => {
               <textarea
                 id="message"
                 className="w-full p-2 border border-gray-700 rounded bg-gray-800 text-white"
-                rows="6"
+              
                 required
               ></textarea>
             </div>
@@ -185,4 +185,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;     
+export default Portfolio;
